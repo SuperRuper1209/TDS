@@ -1,0 +1,15 @@
+{
+  "weirdfishnoises": {
+    "replace": false,
+    "subtitle": "tds.subtitle.weirdfishnoises",
+    "sounds": [
+      {
+        "name": "tds:letmedie1"
+      },
+      {
+        "name": "tds:letmedie2"
+      }
+    ],
+    "category": "hostile"
+  }
+}
