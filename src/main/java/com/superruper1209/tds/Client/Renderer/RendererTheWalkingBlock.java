@@ -1,7 +1,6 @@
 package com.superruper1209.tds.Client.Renderer;
 
 import com.superruper1209.tds.Common.Entities.TheWalkingBlock;
-import com.superruper1209.tds.TDS;
 import net.minecraft.client.renderer.culling.ClippingHelper;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.LivingRenderer;

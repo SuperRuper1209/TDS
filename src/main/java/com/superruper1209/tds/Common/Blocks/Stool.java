@@ -1,7 +1,6 @@
 package com.superruper1209.tds.Common.Blocks;
 
 import com.superruper1209.tds.Common.Miscelenaous.SitUtil;
-import com.superruper1209.tds.TDS;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -39,9 +38,7 @@ public class Stool extends Block {
                 HashMap<BlockPos, PlayerEntity> key = new HashMap<BlockPos, PlayerEntity>();
                 key.put(pos, player);
                 OCCUPIED.put(worldIn.getDimensionKey().getLocation(), key);
-                TDS.LOGGER.info("put");
                 SitUtil.SitAt(player, pos);
-                TDS.LOGGER.info("sit");
                 return ActionResultType.SUCCESS;
             }
             BlockPos actualkey = null;
@@ -60,12 +57,9 @@ public class Stool extends Block {
                     key.put(actualkey, player);
                 }
                 OCCUPIED.put(worldIn.getDimensionKey().getLocation(), key);
-                TDS.LOGGER.info("put");
                 SitUtil.SitAt(player, pos);
-                TDS.LOGGER.info("sit");
                 return ActionResultType.SUCCESS;
             }
-            TDS.LOGGER.info("bruh");
             return ActionResultType.FAIL;
         }
         return ActionResultType.SUCCESS;

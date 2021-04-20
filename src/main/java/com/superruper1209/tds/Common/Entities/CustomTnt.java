@@ -2,17 +2,13 @@ package com.superruper1209.tds.Common.Entities;
 
 import javax.annotation.Nullable;
 
-import com.superruper1209.tds.Common.Entities.TheWalkingBlock;
 import net.minecraft.entity.*;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.IPacket;
 import net.minecraft.network.datasync.DataParameter;
-import net.minecraft.network.datasync.DataSerializers;
-import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.network.NetworkHooks;
 
 public abstract class CustomTnt<T extends CustomTnt> extends Entity {
     private static final DataParameter<Integer> FUSE = null;// = EntityDataManager.createKey(CustomTnt.class, DataSerializers.VARINT);

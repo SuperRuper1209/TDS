@@ -3,7 +3,7 @@ loaderVersion="[35,36)"
 license="Sample text"
 [[mods]]
 modId="tds"
-version="1.2"
+version="1.3"
 displayName="Testing Different Stuff"
 credits=""
 authors="SuperRuper1209"

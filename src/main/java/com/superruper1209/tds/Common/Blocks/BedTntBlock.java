@@ -1,6 +1,5 @@
 package com.superruper1209.tds.Common.Blocks;
 
-import com.superruper1209.tds.Common.Entities.AnchorTnt;
 import com.superruper1209.tds.Common.Entities.BedTnt;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;

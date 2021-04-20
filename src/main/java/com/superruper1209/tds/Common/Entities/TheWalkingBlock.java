@@ -1,6 +1,5 @@
 package com.superruper1209.tds.Common.Entities;
 
-import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;

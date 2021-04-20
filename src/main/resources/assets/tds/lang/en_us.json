@@ -11,5 +11,13 @@
   "block.tds.bed_tnt": "Bed TNT",
   "block.tds.anchor_tnt": "Anchor TNT",
   "item.tds.bed_tnt": "Bed TNT",
-  "item.tds.anchor_tnt": "Anchor TNT"
+  "item.tds.anchor_tnt": "Anchor TNT",
+  "block.tds.spoon_log": "Spoon log",
+  "block.tds.spoon_leaves": "Spoon leaves",
+  "block.tds.spoon_planks": "Spoon planks",
+  "item.tds.spoon_log": "Spoon log",
+  "item.tds.spoon_leaves": "Spoon leaves",
+  "item.tds.spoon_planks": "Spoon planks",
+  "item.tds.spoon_stick": "Spoon grip",
+  "item.tds.comically_large_spoon": "Comically large spoon"
 }

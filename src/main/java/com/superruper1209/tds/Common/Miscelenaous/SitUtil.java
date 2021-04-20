@@ -40,7 +40,6 @@ public class SitUtil {
                         }
                         if (actualkey != null) {
                             Stool.OCCUPIED.get(world.getDimensionKey().getLocation()).remove(actualkey);
-                            TDS.LOGGER.info(Stool.OCCUPIED);
                             this.remove();
                         }
                     }
@@ -76,19 +75,21 @@ public class SitUtil {
         if (event.isDismounting()) {
             if (event.getEntityBeingMounted().getType() == SitEntity.ENTRY) {
                 BlockPos actualkey = null;
-                for (BlockPos pos : Stool.OCCUPIED.get(event.getEntityMounting().world.getDimensionKey().getLocation()).keySet())
-                {
-                    if (pos != null && pos.equals(event.getEntityBeingMounted().getPosition())) {
-                        actualkey = pos;
+                try {
+                    for (BlockPos pos : Stool.OCCUPIED.get(event.getEntityMounting().world.getDimensionKey().getLocation()).keySet()) {
+                        if (pos != null && pos.equals(event.getEntityBeingMounted().getPosition())) {
+                            actualkey = pos;
+                        }
                     }
                 }
-                TDS.LOGGER.info(Stool.OCCUPIED.get(event.getEntityMounting().world.getDimensionKey().getLocation()).containsKey(actualkey));
+                catch (Exception e) {
+
+                }
                 if (actualkey != null) {
                     Stool.OCCUPIED.get(event.getEntityMounting().world.getDimensionKey().getLocation()).remove(actualkey);
-                    TDS.LOGGER.info(Stool.OCCUPIED);
-                    event.getEntityBeingMounted().remove();
-                    event.getEntityMounting().setPosition(event.getEntityMounting().getPosition().getX(), event.getEntityMounting().getPosition().getY()+0.5, event.getEntityMounting().getPosition().getZ());
                 }
+                event.getEntityBeingMounted().remove();
+                event.getEntityMounting().setPosition(event.getEntityMounting().getPosition().getX(), event.getEntityMounting().getPosition().getY()+0.5, event.getEntityMounting().getPosition().getZ());
             }
             event.getEntityBeingMounted().onKillCommand();
         }

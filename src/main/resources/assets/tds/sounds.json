@@ -4,10 +4,10 @@
     "subtitle": "tds.subtitle.weirdfishnoises",
     "sounds": [
       {
-        "name": "tds:letmedie1"
+        "name": "tds:weirdfishnoises1"
       },
       {
-        "name": "tds:letmedie2"
+        "name": "tds:weirdfishnoises2"
       }
     ],
     "category": "hostile"

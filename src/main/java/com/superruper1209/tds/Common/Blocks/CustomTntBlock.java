@@ -6,7 +6,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.item.TNTEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.Item;
@@ -17,8 +16,6 @@ import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.Explosion;
@@ -56,10 +53,6 @@ public abstract class CustomTntBlock extends Block {
 
     }
 
-    /**
-     * Called before the Block is set to air in the world. Called regardless of if the player's tool can actually collect
-     * this block
-     */
     public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player) {
         if (!worldIn.isRemote() && !player.isCreative() && state.get(UNSTABLE)) {
             catchFire(state, worldIn, pos, null, null);
@@ -68,9 +61,6 @@ public abstract class CustomTntBlock extends Block {
         super.onBlockHarvested(worldIn, pos, state, player);
     }
 
-    /**
-     * Called when this Block is destroyed by an Explosion
-     */
     public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
 
     }
@@ -109,9 +99,6 @@ public abstract class CustomTntBlock extends Block {
 
     }
 
-    /**
-     * Return whether this block can drop from an explosion.
-     */
     public boolean canDropFromExplosion(Explosion explosionIn) {
         return false;
     }

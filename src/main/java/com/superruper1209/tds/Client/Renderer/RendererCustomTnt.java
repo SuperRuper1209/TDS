@@ -3,7 +3,6 @@ package com.superruper1209.tds.Client.Renderer;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.superruper1209.tds.Common.Entities.CustomTnt;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
