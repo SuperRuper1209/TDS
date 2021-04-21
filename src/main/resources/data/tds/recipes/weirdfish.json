@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xzx",
+    "zcz",
+    "xzx"
+  ],
+  "key":
+  {
+    "z":
+    {
+      "item": "minecraft:lava_bucket"
+    },
+    "x":
+    {
+      "item": "minecraft:chain"
+    },
+    "c":{
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "result":
+  {
+    "item": "tds:walkingblock_spawnegg",
+    "count": 10
+  }
+}
