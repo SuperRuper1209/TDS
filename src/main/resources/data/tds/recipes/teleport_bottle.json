@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "ZTZ",
+    " Z "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "T": {
+      "item": "tds:spoon_log"
+    },
+    "Z": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "tds:teleport_bottle",
+    "count": 1
+  }
+}

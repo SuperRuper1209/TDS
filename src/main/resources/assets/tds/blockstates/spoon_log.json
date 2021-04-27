@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "tds:block/spoon_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "tds:block/spoon_log"
+    },
+    "axis=z": {
+      "model": "tds:block/spoon_log_horizontal",
+      "x": 90
+    }
+  }
+}

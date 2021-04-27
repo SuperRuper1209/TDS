@@ -1,0 +1,15 @@
+modLoader="javafml"
+loaderVersion="[35,36)"
+license="Sample text"
+[[mods]]
+modId="tds"
+version="1.5"
+displayName="Testing Different Stuff"
+credits=""
+authors="SuperRuper1209"
+description='''
+this is just my test mod i use to discover stuff, why the hell you even downloaded it
+'''
+versionRange="[1.16.4,1.16.5)"
+ordering="NONE"
+side="BOTH"

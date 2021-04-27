@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  O",
+    " # ",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "tds:spoon_stick"
+    },
+    "O": {
+      "item": "tds:spoon_planks"
+    }
+  },
+  "result": {
+    "item": "tds:comically_large_spoon",
+    "count": 1
+  }
+}

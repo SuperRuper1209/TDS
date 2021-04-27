@@ -1,0 +1,6 @@
+{
+  "type": "tds:bottle_type",
+  "generator": {
+    "type": "tds:bottle_gen"
+  }
+}
