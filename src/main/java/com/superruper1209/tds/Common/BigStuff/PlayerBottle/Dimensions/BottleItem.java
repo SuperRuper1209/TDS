@@ -33,33 +33,6 @@ public class BottleItem extends Item {
         super(p_i48487_1_);
     }
 
-    @Override
-    public ActionResult<ItemStack> use(World p_77659_1_, PlayerEntity p_77659_2_, Hand p_77659_3_) {
-        if (p_77659_2_.isShiftKeyDown()) {
-            for (Entity ent : p_77659_2_.level.getServer().getLevel(DimensionReg.BOTTLE).getAllEntities()) {
-                if (!(ent instanceof PlayerEntity)) {
-                    if (ent instanceof CreatureEntity) {
-                        if (((CreatureEntity) ent).getMaxHealth() < 25) {
-                            ent.remove();
-                        }
-                    }
-                }
-                else if (!p_77659_1_.isClientSide) {
-                    ent.changeDimension((ServerWorld) p_77659_1_, new ITeleporter() {
-                        @Override
-                        public Entity placeEntity(Entity entity, ServerWorld currentWorld, ServerWorld destWorld, float yaw, Function<Boolean, Entity> repositionEntity) {
-                            entity = repositionEntity.apply(true);
-                            entity.teleportTo(p_77659_2_.getX(), p_77659_2_.getY(), p_77659_2_.getZ());
-                            return entity;
-                        }
-                    });
-                }
-            }
-            p_77659_2_.displayClientMessage(new TranslationTextComponent("item.tds.teleport_bottle.pour_entities"), true);
-        }
-        return ActionResult.success(p_77659_2_.getMainHandItem());
-    }
-
     public static void TeleportEntity(PlayerInteractEvent.EntityInteract event) {
         Entity p_77659_2_ = event.getTarget();
         if (p_77659_2_.level.getServer() != null && p_77659_2_.level.getServer().getLevel(DimensionReg.BOTTLE) != null && p_77659_2_.level.dimension() != DimensionReg.BOTTLE && p_77659_2_ instanceof CreatureEntity && event.getPlayer().getMainHandItem().getItem().equals(BottleItem.ENTRY)) {
